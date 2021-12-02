@@ -10,29 +10,58 @@
     <title>GesAlunos</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Gestão de alunos</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="searchAlunos.html">Consultar Alunos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="insert.html">Inserir Alunos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
-          </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Gestão Alunos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+          <a class="nav-link" href="insert.html">Formulario</a>
+          
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
+
+      <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Morada</th>
+                <th scope="col">Nº Morada</th>
+                <th scope="col">Data de Nascimento</th>
+                <th scope="col">Telemovel</th>
+                <th scope="col">Email</th>
+                <th scope="col">Turma</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Adolfo</td>
+                <td>Canada da Paz</td>
+                <td>6</td>
+                <td>26/06/2003</td>
+                <td>296626730</td>
+                <td>frazaokzn@hotmail.com</td>
+                <td>TIS-Turma1</td>
+                <td scope="col">
+                  <button type="button" class="btn btn-dark">Ver</button>
+                  <button type="button" class="btn btn-primary">Editar</button>
+                  <button type="button" class="btn btn-danger">Remover</button>
+                </td>
+              
+            </tbody>
+          </table>
+    </div>
+           
       <style>
         #footer {
             position: fixed;
