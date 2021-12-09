@@ -1,3 +1,45 @@
+function initForm(){
+    getNavbar()
+    getTipos()
+}
+function getTipos(){
+    const option = document.getElementById('tipo')
+    fetch('http://localhost:3000/tipos')
+    .then(res => res.json())
+    .then(data => {
+        for(i in data){
+            let op =`<option value="${data[i].idtipos}">${data[i].designacao}</option>`
+            option.innerHTML += op
+        }
+    })
+    .catch((err)=> {
+        alert(err)
+    })
+}
+
+function adicionar(){
+    let nome = document.getElementById('nome').value
+    console.log(nome)
+
+    let morada = document.getElementById('morada').value
+    console.log(morada)
+
+    let n = document.getElementById('n').value
+    console.log(n)
+
+    let telemovel = document.getElementById('telemovel').value
+    console.log(telemovel)
+
+    let email = document.getElementById('email').value
+    console.log(email)
+
+    let data = document.getElementById('data').value
+    console.log(data)
+
+    let curso = document.getElementById('curso').value
+    console.log(curso)
+}
+
 function getNavbar(){
     const nbar = document.getElementById('nbar')
     fetch('http://localhost:3000/navbar.html')
@@ -11,6 +53,8 @@ function getNavbar(){
         alert('Ocorreu um erro')
     })
 }
+
+
 
 
 /*
