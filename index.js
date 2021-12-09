@@ -1,6 +1,7 @@
 const express = require('express')
 const Connection = require('./dbconnection')
 const path = require('path')
+const res = require('express/lib/response')
 const app = express()
  
 app.use(express.static('./public'))
@@ -22,6 +23,11 @@ app.get('/tipos',(req, res) => {
         }
       })
 }) 
+
+app.post('/insert', (req,res) => {
+  console.log(req.body)
+  res.send('Feito com sucesso ')
+})
 
 const port = 3000;
 

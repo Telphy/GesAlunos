@@ -23,16 +23,16 @@
                       <h5 class="text-center mb-4"></h5>
                       <form class="form-card" onsubmit="event.preventDefault()">
                           <div class="row justify-content-between text-left">
-                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Nome Completo<span class="text-danger"> *</span></label> <input type="text" id="nome" name="fname" placeholder="" onblur="validate(1)"> </div>
-                              <div class="form-group col-sm-4 flex-column d-flex"> <label class="form-control-label px-3">Morada<span class="text-danger"> *</span></label> <input type="text" id="morada" name="lname" placeholder="" onblur="validate(2)"> </div>
-                              <div class="form-group col-sm-2 flex-column d-flex"> <label class="form-control-label px-3">Nº<span class="text-danger"> *</span></label> <input type="text" id="n" name="lname" placeholder="" onblur="validate(2)"> </div>
+                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Nome Completo<span class="text-danger"> *</span></label> <input type="text" id="nome" name="fname" placeholder=""> </div>
+                              <div class="form-group col-sm-4 flex-column d-flex"> <label class="form-control-label px-3">Morada<span class="text-danger"> *</span></label> <input type="text" id="morada" name="lname" placeholder="" > </div>
+                              <div class="form-group col-sm-2 flex-column d-flex"> <label class="form-control-label px-3">Nº<span class="text-danger"> *</span></label> <input type="text" id="n" name="lname" placeholder=""> </div>
                           </div>
                           <div class="row justify-content-between text-left mt-4">
-                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="" onblur="validate(3)"> </div>
-                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Telemovel<span class="text-danger"> *</span></label> <input type="text" id="Telemovel" name="mob" placeholder="" onblur="validate(4)"> </div>
+                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder=""> </div>
+                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Telemovel<span class="text-danger"> *</span></label> <input type="text" id="tel" name="mob" placeholder=""> </div>
                           </div>
                           <div class="row justify-content-between text-left mt-4">
-                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Data de Nascimento<span class="text-danger"> *</span></label> <input type="text" id="data" name="job" placeholder="" onblur="validate(5)"> </div>
+                              <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Data de Nascimento<span class="text-danger"> *</span></label> <input type="date" id="data" name="job" placeholder=""> </div>
                               <div class="row justify-content-end">
                                 <div class="form-group col-sm-6"> <button onclick="adicionar()" type="submit" class="btn-block btn-primary">Resgistrar</button> </div>
                             </div>

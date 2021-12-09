@@ -18,6 +18,7 @@ function getTipos(){
 }
 
 function adicionar(){
+    //obter os valores introduzidos no formulario
     let nome = document.getElementById('nome').value
     console.log(nome)
 
@@ -27,8 +28,8 @@ function adicionar(){
     let n = document.getElementById('n').value
     console.log(n)
 
-    let telemovel = document.getElementById('telemovel').value
-    console.log(telemovel)
+    let tel = document.getElementById('tel').value
+    console.log(tel)
 
     let email = document.getElementById('email').value
     console.log(email)
@@ -38,6 +39,39 @@ function adicionar(){
 
     let curso = document.getElementById('curso').value
     console.log(curso)
+
+    //criar um objeto com os valores
+
+    let objeto = {
+
+        //nome na DB : nome na variavel
+        nomeutilizador:nome,
+        moradarua:morada,
+        moradanumero:n,
+        telemovel:tel,
+        email:email,
+        datanascimento:data,
+        Tipo:curso,
+    }
+
+    let objetoJSON = JSON.stringify(objeto)
+        //preparar as opcoes do pedido
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-type': 'aplication/json'
+        },
+        body: objetoJSON
+    }
+    //fazer um fetch com as opcoes acima definidas
+    fetch('http://localhost:3000/insert', options)
+    .then(res => res.text())
+    .then(text => {
+        alert(text)
+    })
+    .catch((err) =>
+        alert('ocorreu um erro no pedido')
+    )
 }
 
 function getNavbar(){
