@@ -1,9 +1,8 @@
 const express = require('express')
-const path = require('path')
 const insertRoute = express.Router()
 
-insertRoute.get('/', (req, res) => {
-    res.sendFile(path.join(_dirname, '../public/insert.html'))
-  }) 
+insertRoute.post('/', (req,res) => {
+    console.log(req.body)
+})
 
 module.exports = insertRoute
