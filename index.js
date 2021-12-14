@@ -1,33 +1,17 @@
 const express = require('express')
-const Connection = require('./dbconnection')
-const path = require('path')
-const res = require('express/lib/response')
 const app = express()
  
 app.use(express.static('./public'))
 
- app.get('/', (req, res) => {
-  res.sendFile(path.join(_dirname, './public/index.html'))
-}) 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json({extended: false}));
 
-app.get('/navbar',(req, res) => {
-  res.sendFile(path.join(_dirname, './public/navbar.html'))
-}) 
+//rotas para os pedidos
+app.use('/',require('./routes/mainRoute.js'))
+app.use('/navbar',require('./routes/navbarRoute.js'))
+app.use('/tipos',require('./routes/tiposRoute.js'))
+app.use('/insert',require('./routes/insertRoute.js'))
 
-app.get('/tipos',(req, res) => {
-  Connection.query('SELECT * FROM tipos', (err,result) => {
-    if(err)
-      res.json('Ocorreu um problema na DB' )
-        else {
-          res.json(result)
-        }
-      })
-}) 
-
-app.post('/insert', (req,res) => {
-  console.log(req.body)
-  res.send('Feito com sucesso ')
-})
 
 const port = 3000;
 

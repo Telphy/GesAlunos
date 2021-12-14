@@ -51,7 +51,7 @@ function adicionar(){
         telemovel:tel,
         email:email,
         datanascimento:data,
-        Tipo:curso,
+        curso:curso,
     }
 
     let objetoJSON = JSON.stringify(objeto)

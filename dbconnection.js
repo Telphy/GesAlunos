@@ -16,7 +16,7 @@ connection.connect(function(err){
     }
 
     else{
-        console.log('connected to DB =' + process.env._DATABASE)
+        console.log('connected to DB = ' + process.env._DATABASE)
 
     }
 })
