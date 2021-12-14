@@ -2,9 +2,11 @@ function initForm(){
     getNavbar()
     getTipos()
 }
+
+
 function getTipos(){
     const option = document.getElementById('tipo')
-    fetch('http://localhost:3000/tipos')
+    fetch('http://localhost:3000/tipos')    
     .then(res => res.json())
     .then(data => {
         for(i in data){
@@ -15,6 +17,7 @@ function getTipos(){
     .catch((err)=> {
         alert(err)
     })
+
 }
 
 function adicionar(){
@@ -37,8 +40,8 @@ function adicionar(){
     let data = document.getElementById('data').value
     console.log(data)
 
-    let curso = document.getElementById('curso').value
-    console.log(curso)
+    let tipo = document.getElementById('tipo').value
+    console.log(tipo)
 
     //criar um objeto com os valores
 
@@ -51,10 +54,12 @@ function adicionar(){
         telemovel:tel,
         email:email,
         datanascimento:data,
-        curso:curso,
+        idtipos:tipo,
     }
 
     let objetoJSON = JSON.stringify(objeto)
+
+    console.log(objetoJSON)
         //preparar as opcoes do pedido
     const options = {
         method: 'POST',
@@ -64,7 +69,7 @@ function adicionar(){
         body: objetoJSON
     }
     //fazer um fetch com as opcoes acima definidas
-    fetch('http://localhost:3000/insert.html', options)
+    fetch('http://localhost:3000/insert', options)
     .then(res => res.text())
     .then(text => {
         alert(text)
